@@ -22,6 +22,15 @@ ________________________________________
 •	Buzzer
 •	Resistores
 ________________________________________
+🔗 Funcionalidades
+•	Leitura de umidade do solo
+•	Leitura do nível do reservatório
+•	Controle automático da irrigação
+•	Exibição em display OLED
+•	Envio de dados via HTTP
+•	Envio de dados via MQTT
+•	Dashboard em tempo real
+________________________________________
 🌐 Backend
 📡 API HTTP
 Arquivo: server/dados.php
@@ -42,6 +51,11 @@ No servidor:
 mysqldump -u usuario -p irrigacao > banco.sql
 ________________________________________
 📊 Dashboard
+O dashboard apresenta:
+•	Umidade do solo (%)
+•	Nível do reservatório (%)
+•	Status do sistema (Normal / Irrigando)
+Interface otimizada para visualização mobile.
 Acessar:
 http://(http://18.231.109.143/):1880/ui
 Exibe:
