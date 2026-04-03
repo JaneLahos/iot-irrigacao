@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "author": "Jane de Godoi Lahós",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled1",
+      "top": 79.94,
+      "left": -162.97,
+      "attrs": { "i2cAddress": "0x3c" }
+    },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": -49.3, "left": 163, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": -78.1, "left": -86.6, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 188.4,
+      "left": 359,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-led", "id": "led2", "top": 121.2, "left": 359, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 54,
+      "left": 359,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 71.15,
+      "left": 259.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r2",
+      "top": 138.35,
+      "left": 259.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r3",
+      "top": 205.55,
+      "left": 259.2,
+      "attrs": { "value": "1000" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 328.8,
+      "left": -65.4,
+      "attrs": { "volume": "0.1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "oled1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "oled1:VCC", "esp:3V3.1", "red", [ "v0" ] ],
+    [ "oled1:SDA", "esp:8", "green", [ "v48", "h96.07" ] ],
+    [ "oled1:SCL", "esp:9", "green", [ "v0" ] ],
+    [ "pot2:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "pot1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "pot2:VCC", "esp:3V3.1", "red", [ "v0" ] ],
+    [ "pot1:VCC", "esp:3V3.1", "red", [ "v0" ] ],
+    [ "pot1:SIG", "esp:4", "green", [ "v0" ] ],
+    [ "pot2:SIG", "esp:5", "green", [ "v0" ] ],
+    [ "led3:A", "r1:2", "green", [ "v0" ] ],
+    [ "led3:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "r1:1", "esp:6", "green", [ "v0" ] ],
+    [ "led2:A", "r2:2", "green", [ "v0" ] ],
+    [ "led2:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "r2:1", "esp:7", "green", [ "v0" ] ],
+    [ "led1:A", "r3:2", "green", [ "v0" ] ],
+    [ "r3:1", "esp:16", "green", [ "v0" ] ],
+    [ "led1:C", "esp:GND.1", "green", [ "v0" ] ],
+    [ "bz1:2", "esp:15", "green", [ "v0" ] ],
+    [ "bz1:1", "esp:GND.1", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
