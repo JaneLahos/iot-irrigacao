@@ -83,5 +83,10 @@ ________________________________________
 📷 Demonstração
 Ver pasta /imagens
 ________________________________________
+
+## 🔬 Simulação (Wokwi)
+
+https://wokwi.com/projects/459486978746268673
+__________________________________________
 👩‍💻 Autor: Jane de Godoi Lahos
 Projeto acadêmico de IoT aplicado a irrigação inteligente.
