@@ -1,10 +1,10 @@
-CREATE DATABASE iot;
+CREATE DATABASE irrigacao;
 
-USE iot;
+USE irrigacao;
 
-CREATE TABLE dados (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  umidade INT,
-  nivel INT,
-  data TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE leituras (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    umidade INT,
+    nivel INT,
+    data_hora TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
