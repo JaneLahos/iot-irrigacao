@@ -24,12 +24,12 @@ ________________________________________
 ________________________________________
 🌐 Backend
 📡 API HTTP
-Arquivo: backend/dados.php
+Arquivo: server/dados.php
 Recebe dados via GET:
 /dados.php?umidade=50&nivel=80
 ________________________________________
 🗄️ Banco de Dados
-Arquivo: backend/banco.sql
+Arquivo: database/banco.sql
 Tabela:
 •	leituras
 o	id
@@ -43,7 +43,7 @@ mysqldump -u usuario -p irrigacao > banco.sql
 ________________________________________
 📊 Dashboard
 Acessar:
-http://SEU_IP:1880/ui
+http://(http://18.231.109.143/):1880/ui
 Exibe:
 •	Umidade (%)
 •	Nível (%)
